@@ -1,8 +1,126 @@
-<html>
+﻿<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
+    <meta charset="utf-8" />
+    <title>ShortDevelopment</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" media="print" onload="this.media='all'"> 
+    <style>
+        body, html{
+            margin:0px;
+            padding:0px;
+            font-family: 'Roboto', sans-serif;
+        }
+        header{
+            width:calc(100% - 20px);
+            height:50px;
+            margin-bottom:40px;
+            padding:10px;
+            text-align:right;
+        }
+        header a{
+            display:inline-block;
+            text-decoration:none;
+            color:black;
+            cursor:pointer;
+            height:30px;
+            position:relative;
+        }
+        header a img{
+            height:100%;
+        }
+        .container{
+            width:100%;
+            margin:10px 0px;
+        }
+        .center{
+            text-align:center;
+        }
+        .spacer{
+            height:15px;
+        }
+        .spacer_big{
+            height:50px;
+        }
+        .avatar{
+            display:inline-block;
+            width:200px;
+            height:200px;
+            background-image:url("media/logo.jpg");
+            background-size:auto 100%;
+            background-position:center;
+            background-repeat:no-repeat;
+            border-radius:50%;
+            border:10px solid #E3F2FD;
+        }
+        .name{
+            margin:25px 0px;
+            color:#424242;
+        }
+        .name strong{
+            color:black;
+        }
+        .vertical_imgs, .vertical_label{
+            width:100%;
+            text-align:center;
+        }
+        .vertical_imgs img{
+            width:40px;
+            height:40px;
+            display:inline-block;
+            margin:5px;
+        }
+        .vertical_label label{    
+            display:inline-block;
+            margin:5px 10px;
+            font-weight:500;
+        }
+    </style>
 </head>
 <body>
-<h1>Hello World</h1>
+    <header>
+        <a href="https://github.com/ShortDevelopment">
+            <table>
+                <tr>
+                    <td>
+                        <img src="media/github.svg" />
+                    </td>
+                    <td>                        
+                        <label>GitHub</label>
+                    </td>
+                </tr>
+            </table>
+        </a>
+    </header>
+    <div class="container center">
+        <div class="avatar"></div>
+        <div class="name"><strong>Lukas Kurz</strong> alias <strong>ShortDevelopment</strong></div>
+    </div>
+    <div class="spacer_big"></div>
+    <div class="container center">
+        <h2>Platforms</h2>
+        <div class="vertical_imgs">
+            <img src="media/android.svg" />
+            <img src="media/windows.svg" />            
+            <img src="media/web.svg" />
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="container center">
+        <h2>Languages</h2>
+        <div class="vertical_label">
+            <label>c#</label>
+            <label>vb.net</label>
+            <label>php</label>
+            <label>js</label>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="container center">
+        <h2>Frameworks</h2>
+        <div class="vertical_label">
+            <label>.NET</label>
+            <label>Xamarin</label>
+        </div>
+    </div>
 </body>
 </html>
