@@ -14,91 +14,132 @@
     <meta name="keywords" content="C# Visual Basic .NET Xamarin Unity Arduino Minecraft Bedrock Windows Forms" />
     <title>ShortDevelopment</title>
     <meta name="google-site-verification" content="IhenYNccYMaoPCVlScha2haj-R99zxa3SHJ3V_v5GgY" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" media="print" onload="this.media='all'"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <style>
-        body, html{
-            margin:0px;
-            padding:0px;
+        body, html {
+            margin: 0px;
+            padding: 0px;
             font-family: 'Roboto', sans-serif;
         }
-        header{
-            width:100%;
-            height:50px;
-            margin-bottom:40px;
-            
-            text-align:right;
+
+        body {
+            background: white;
+            transition: background 0.5s;
         }
-        header a {
+
+        header {
+            width: 100%;
+            height: 50px;
+            text-align: right;
+            position: sticky;
+            top: 0px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+            header a {
+                display: inline-block;
+                text-decoration: none;
+                color: black;
+                cursor: pointer;
+                height: 30px;
+                padding: 10px;
+                position: relative;
+                transition: background-color 0.2s;
+            }
+
+                header a img {
+                    height: 100%;
+                }
+
+                header a:hover {
+                    background-color: #E3F2FD;
+                }
+
+            header table {
+                width: 100%;
+                height: 100%;
+            }
+
+                header table img {
+                    margin-right: 5px;
+                }
+
+        .vr {
             display: inline-block;
-            text-decoration: none;
-            color: black;
-            cursor: pointer;
-            height: 30px;
-            padding: 10px;
-            position: relative;
-            transition: background-color 0.2s;
+            height: 20px;
+            margin: 15px 0px;
+            width: 1px;
+            box-sizing: border-box;
+            border-left: 1px solid lightgray;
         }
-        header a img{
-            height:100%;
+
+        .container {
+            width: 100%;
+            margin: 10px 0px;
         }
-        header a:hover {
-            background-color: #E3F2FD;
+
+        .center {
+            text-align: center;
         }
-        .container{
-            width:100%;
-            margin:10px 0px;
+
+        .spacer {
+            width: 100%;
+            height: 15px;
         }
-        .center{
-            text-align:center;
+
+        .spacer_big {
+            width: 100%;
+            height: 50px;
         }
-        .spacer{
-            height:15px;
+
+        .avatar {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-image: url("media/logo.jpg");
+            background-size: auto 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            border: 10px solid #E3F2FD;
         }
-        .spacer_big{
-            height:50px;
+
+        .name {
+            margin: 25px 0px;
+            color: #424242;
         }
-        .avatar{
-            display:inline-block;
-            width:200px;
-            height:200px;
-            background-image:url("media/logo.jpg");
-            background-size:auto 100%;
-            background-position:center;
-            background-repeat:no-repeat;
-            border-radius:50%;
-            border:10px solid #E3F2FD;
+
+            .name strong {
+                color: black;
+            }
+
+        .vertical_imgs, .vertical_label {
+            width: 100%;
+            text-align: center;
         }
-        .name{
-            margin:25px 0px;
-            color:#424242;
-        }
-        .name strong{
-            color:black;
-        }
-        .vertical_imgs, .vertical_label{
-            width:100%;
-            text-align:center;
-        }
-        .vertical_imgs img{
-            width:40px;
-            height:40px;
-            display:inline-block;
-            margin:5px;
-        }
-        .vertical_label label{    
-            display:inline-block;
-            margin:5px 10px;
-            font-weight:500;
-        }
+
+            .vertical_imgs img {
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .vertical_label label {
+                display: inline-block;
+                margin: 5px 10px;
+                font-weight: 500;
+            }
+
         .project {
             width: calc(100% - 20px);
             max-width: 600px;
-            margin: 10px auto;
+            margin: 10px;
             box-shadow: 0px 1px 2px 0px rgba(65,69,73,0.3), 0px 3px 6px 2px rgba(65,69,73,0.15);
             border-radius: 8px;
             background: #E3F2FD;
             cursor: pointer !important;
-            display: block;
+            display: inline-block;
             color: black;
             text-decoration: none !important;
             outline: none !important;
@@ -106,22 +147,85 @@
             box-sizing: border-box;
             overflow-y: hidden;
         }
-        .project p{
-            margin:0px;
-            padding:0px;
-            color:#5f6b77;
-            transition:color 0.2s;
+
+            .project p {
+                margin: 0px;
+                padding: 0px;
+                color: #5f6b77;
+                transition: color 0.2s;
+            }
+
+            .project:hover h1 {
+                text-decoration: underline;
+            }
+
+            .project:hover p {
+                color: black;
+            }
+
+        .card {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .project:hover h1{
-            text-decoration:underline;
+
+        .anchor {
+            position: relative;
+            top: -50px;
         }
-        .project:hover p {
-            color:black;
+
+        .gist{
+            margin:10px 10px;
+            width:calc(100vw - 40px);
+            max-width:1400px;
         }
     </style>
+    <script>
+        window.addEventListener("scroll", (event) => {
+            let scrollHeight = window.scrollY || document.body.scrollHeight;
+            console.log(scrollHeight);
+            Array.from(document.getElementsByClassName("card"), (ele, index) => {
+                let bounds = ele.getBoundingClientRect();
+                console.log(`${index}: ${bounds.top}`)
+                if (bounds.top <= 500) {
+                    let background = ele.getAttribute("data-background");
+                    document.body.style.background = background;
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
+        <a href="#me" title="Who am I?">
+            <table>
+                <tr>
+                    <td>
+                        About me
+                    </td>
+                </tr>
+            </table>
+        </a>
+        <a href="#projects" title="My Projects">
+            <table>
+                <tr>
+                    <td>
+                        Projects
+                    </td>
+                </tr>
+            </table>
+        </a>
+        <a href="#feed" title="Feed">
+            <table>
+                <tr>
+                    <td>
+                        Feed
+                    </td>
+                </tr>
+            </table>
+        </a>
+        <div class="vr"></div>
         <a href="https://github.com/ShortDevelopment" title="Go to GitHub!">
             <table>
                 <tr>
@@ -129,91 +233,114 @@
                         <img src="media/github.svg" />
                     </td>
                     <td>
-                        <label>GitHub</label>
+                        GitHub
                     </td>
                 </tr>
             </table>
         </a>
     </header>
-    <div class="container center">
-        <div class="avatar"></div>
-        <div class="name"><strong>Lukas Kurz</strong> alias <strong>ShortDevelopment</strong></div>
-    </div>
-    <div class="spacer_big"></div>
-    <div class="container center">
-        <h2>Platforms</h2>
-        <div class="vertical_imgs">
-            <img title="Android" src="media/android.svg" />
-            <img title="Windows" src="media/windows.svg" />
-            <img title="Web" src="media/web.svg" />
-            <img title="Arduino 😉" src="media/arduino.svg" />
+    <div class="card" style="min-height: calc(100vh - 50px);" data-background="rgb(255, 255, 255)">
+        <div>
+            <a name="me" class="anchor"></a>
+            <div class="spacer_big"></div>
+            <div class="container center">
+                <div class="avatar"></div>
+                <div class="name"><strong>Lukas Kurz</strong> alias <strong>ShortDevelopment</strong></div>
+            </div>
+            <div class="spacer_big"></div>
+            <div class="container center">
+                <h2>Platforms</h2>
+                <div class="vertical_imgs">
+                    <img title="Android" src="media/android.svg" />
+                    <img title="Windows" src="media/windows.svg" />
+                    <img title="Web" src="media/web.svg" />
+                    <img title="Arduino 😉" src="media/arduino.svg" />
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div class="container center">
+                <h2>Languages</h2>
+                <div class="vertical_label">
+                    <label title="c# for Windows and Android">c#</label>
+                    <label title="vb.net for Windows">vb.net</label>
+                    <label title="php for Web">php</label>
+                    <label title="js for Web">js</label>
+                    <label title="c++ for Arduino (and Windows)">(C++)</label>
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div class="container center">
+                <h2>Frameworks</h2>
+                <div class="vertical_label">
+                    <label title=".NET for Windows (and Android)">.NET</label>
+                    <label title="Xamarin for Android">Xamarin</label>
+                    <label title="Unity for Gamedevelopment">Unity</label>
+                </div>
+            </div>
+            <div class="spacer_big"></div>
+            <div class="spacer_big"></div>
+            <div class="spacer_big"></div>
         </div>
     </div>
-    <div class="spacer"></div>
-    <div class="container center">
-        <h2>Languages</h2>
-        <div class="vertical_label">
-            <label title="c# for Windows and Android">c#</label>
-            <label title="vb.net for Windows">vb.net</label>
-            <label title="php for Web">php</label>
-            <label title="js for Web">js</label>
-            <label title="c++ for Arduino (and Windows)">(C++)</label>
+    <div class="card" data-background="rgb(52,73,94)">
+        <div>
+            <a name="projects" class="anchor"></a>
+            <div class="container center" style="max-width:1400px;">
+                <h2>Projects</h2>
+                <a href="https://github.com/ShortDevelopment/Legacy-Edge-Launcher" target="_blank" class="project">
+                    <h1>
+                        Legacy-Edge-Launcher
+                    </h1>
+                    <p>Get back to Microsoft Edge Legacy as simple as possible!</p>
+                </a>
+                <a href="https://github.com/ShortDevelopment/Minecraft-Bedrock" target="_blank" class="project">
+                    <h1>
+                        Minecraft-Bedrock
+                    </h1>
+                    <p>Learning about addons, scripts and servers (bedrock / pe edition)</p>
+                </a>
+                <a href="https://github.com/ShortDevelopment/WhatsApp-Math-Function-Renderer" target="_blank" class="project">
+                    <h1>
+                        WhatsApp-Math-Function-Renderer
+                    </h1>
+                    <p>Send math-functions via social media!</p>
+                </a>
+                <a href="https://github.com/ShortDevelopment/BigBlueButton-Smiliey" target="_blank" class="project">
+                    <h1>
+                        BigBlueButton-Smiliey
+                    </h1>
+                    <p>Use smilies in a BigBlueButton and Moodle chat</p>
+                </a>
+                <a href="https://github.com/ShortDevelopment/Creo-open-DRW" target="_blank" class="project">
+                    <h1>
+                        Creo-open-DRW
+                    </h1>
+                    <p>Allows opening a corresponding *.drw file of a *.prt or *.asm file within Creo Parametrics</p>
+                </a>
+                <a href="https://github.com/ShortDevelopment/HGGMoodleClient" target="_blank" class="project">
+                    <h1>
+                        HGGMoodleClient
+                    </h1>
+                    <p>Client for the HGG Moodle-Platform</p>
+                </a>
+                <a href="https://github.com/ShortDevelopment/EnvironmentINdb" target="_blank" class="project">
+                    <h1>
+                        EnvironmentINdb
+                    </h1>
+                    <p>Unser Beitrag zum BundesUmweltWettbewerb 2019. Mit @jonjon0815.</p>
+                </a>
+            </div>
         </div>
     </div>
-    <div class="spacer"></div>
-    <div class="container center">
-        <h2>Frameworks</h2>
-        <div class="vertical_label">
-            <label title=".NET for Windows (and Android)">.NET</label>
-            <label title="Xamarin for Android">Xamarin</label>
-            <label title="Unity for Gamedevelopment">Unity</label>
+    <div class="card" data-background="white">
+        <div>
+            <a name="feed" class="anchor"></a>
+            <div class="container center" style="max-width:1400px;">
+                <h2>Feed</h2>
+                <script src="https://gist.github.com/ShortDevelopment/d16086f9b203dbbb8b257c8fed1c346c.js"></script>
+                <script src="https://gist.github.com/ShortDevelopment/0b43fa199ac59ddcf0af5de416698315.js"></script>
+            </div>
         </div>
-    </div>
-    <div class="spacer_big"></div>
-    <div class="container center">
-        <h2>Projects</h2>
-        <a href="https://github.com/ShortDevelopment/Legacy-Edge-Launcher" target="_blank" class="project">
-            <h1>
-                Legacy-Edge-Launcher
-            </h1>
-            <p>Get back to Microsoft Edge Legacy as simple as possible!</p>
-        </a>
-        <a href="https://github.com/ShortDevelopment/Minecraft-Bedrock" target="_blank" class="project">
-            <h1>
-                Minecraft-Bedrock
-            </h1>
-            <p>Learning about addons, scripts and servers (bedrock / pe edition)</p>
-        </a>
-        <a href="https://github.com/ShortDevelopment/WhatsApp-Math-Function-Renderer" target="_blank" class="project">
-            <h1>
-                WhatsApp-Math-Function-Renderer
-            </h1>
-            <p>Send math-functions via social media!</p>
-        </a>
-        <a href="https://github.com/ShortDevelopment/BigBlueButton-Smiliey" target="_blank" class="project">
-            <h1>
-                BigBlueButton-Smiliey
-            </h1>
-            <p>Use smilies in a BigBlueButton and Moodle chat</p>
-        </a>
-        <a href="https://github.com/ShortDevelopment/Creo-open-DRW" target="_blank" class="project">
-            <h1>
-                Creo-open-DRW
-            </h1>
-            <p>Allows opening a corresponding *.drw file of a *.prt or *.asm file within Creo Parametrics</p>
-        </a>
-        <a href="https://github.com/ShortDevelopment/HGGMoodleClient" target="_blank" class="project">
-            <h1>
-                HGGMoodleClient
-            </h1>
-            <p>Client for the HGG Moodle-Platform</p>
-        </a>
-        <a href="https://github.com/ShortDevelopment/EnvironmentINdb" target="_blank" class="project">
-            <h1>
-                EnvironmentINdb
-            </h1>
-            <p>Unser Beitrag zum BundesUmweltWettbewerb 2019. Mit @jonjon0815.</p>
-        </a>
     </div>
 </body>
 </html>
