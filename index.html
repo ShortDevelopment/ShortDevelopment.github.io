@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -10,13 +11,16 @@
     <link rel="shortcut icon" href="media/favicon.png" />
     <link rel="apple-touch-icon" href="media/favicon.png" />
     <link rel="apple-touch-startup-image" href="media/logo.png" />
-    <meta name="description" content="Projects from Lukas Kurz visible on https://github.com/ShortDevelopment/. C# Visual Basic .NET Xamarin Unity Arduino Minecraft Bedrock Windows Forms" />
+    <meta name="description"
+        content="Projects from Lukas Kurz visible on https://github.com/ShortDevelopment/. C# Visual Basic .NET Xamarin Unity Arduino Minecraft Bedrock Windows Forms" />
     <meta name="keywords" content="C# Visual Basic .NET Xamarin Unity Arduino Minecraft Bedrock Windows Forms" />
     <title>ShortDevelopment</title>
     <meta name="google-site-verification" content="IhenYNccYMaoPCVlScha2haj-R99zxa3SHJ3V_v5GgY" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" media="print"
+        onload="this.media='all'">
     <style>
-        body, html {
+        body,
+        html {
             margin: 0px;
             padding: 0px;
             font-family: 'Roboto', sans-serif;
@@ -34,35 +38,37 @@
             position: sticky;
             top: 0px;
             background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 1px 2px 0px rgba(65, 69, 73, 0.3), 0px 3px 6px 2px rgba(65, 69, 73, 0.15);
+            z-index: 100;
         }
 
-            header a {
-                display: inline-block;
-                text-decoration: none;
-                color: black;
-                cursor: pointer;
-                height: 30px;
-                padding: 10px;
-                position: relative;
-                transition: background-color 0.2s;
-            }
+        header a {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+            height: 30px;
+            padding: 10px;
+            position: relative;
+            transition: background-color 0.2s;
+        }
 
-                header a img {
-                    height: 100%;
-                }
+        header a img {
+            height: 100%;
+        }
 
-                header a:hover {
-                    background-color: #E3F2FD;
-                }
+        header a:hover {
+            background-color: #E3F2FD;
+        }
 
-            header table {
-                width: 100%;
-                height: 100%;
-            }
+        header table {
+            width: 100%;
+            height: 100%;
+        }
 
-                header table img {
-                    margin-right: 5px;
-                }
+        header table img {
+            margin-right: 5px;
+        }
 
         .vr {
             display: inline-block;
@@ -109,33 +115,34 @@
             color: #424242;
         }
 
-            .name strong {
-                color: black;
-            }
+        .name strong {
+            color: black;
+        }
 
-        .vertical_imgs, .vertical_label {
+        .vertical_imgs,
+        .vertical_label {
             width: 100%;
             text-align: center;
         }
 
-            .vertical_imgs img {
-                width: 40px;
-                height: 40px;
-                display: inline-block;
-                margin: 5px;
-            }
+        .vertical_imgs img {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            margin: 5px;
+        }
 
-            .vertical_label label {
-                display: inline-block;
-                margin: 5px 10px;
-                font-weight: 500;
-            }
+        .vertical_label label {
+            display: inline-block;
+            margin: 5px 10px;
+            font-weight: 500;
+        }
 
         .project {
             width: calc(100% - 20px);
             max-width: 600px;
             margin: 10px;
-            box-shadow: 0px 1px 2px 0px rgba(65,69,73,0.3), 0px 3px 6px 2px rgba(65,69,73,0.15);
+            box-shadow: 0px 1px 2px 0px rgba(65, 69, 73, 0.3), 0px 3px 6px 2px rgba(65, 69, 73, 0.15);
             border-radius: 8px;
             background: #E3F2FD;
             cursor: pointer !important;
@@ -148,20 +155,20 @@
             overflow-y: hidden;
         }
 
-            .project p {
-                margin: 0px;
-                padding: 0px;
-                color: #5f6b77;
-                transition: color 0.2s;
-            }
+        .project p {
+            margin: 0px;
+            padding: 0px;
+            color: #5f6b77;
+            transition: color 0.2s;
+        }
 
-            .project:hover h1 {
-                text-decoration: underline;
-            }
+        .project:hover h1 {
+            text-decoration: underline;
+        }
 
-            .project:hover p {
-                color: black;
-            }
+        .project:hover p {
+            color: black;
+        }
 
         .card {
             min-height: 100vh;
@@ -175,14 +182,15 @@
             top: -50px;
         }
 
-        .gist{
-            margin:10px 10px;
-            width:calc(100vw - 40px);
-            max-width:1400px;
+        .gist {
+            margin: 10px 10px;
+            width: calc(100vw - 40px);
+            max-width: 1400px;
         }
     </style>
     <script>
         window.addEventListener("scroll", (event) => {
+            return; // Disable
             let scrollHeight = window.scrollY || document.body.scrollHeight;
             console.log(scrollHeight);
             Array.from(document.getElementsByClassName("card"), (ele, index) => {
@@ -196,6 +204,7 @@
         });
     </script>
 </head>
+
 <body>
     <header>
         <a href="#me" title="Who am I?">
@@ -287,11 +296,17 @@
             <a name="projects" class="anchor"></a>
             <div class="container center" style="max-width:1400px;">
                 <h2>Projects</h2>
-                <a href="https://github.com/ShortDevelopment/Legacy-Edge-Launcher" target="_blank" class="project">
+                <a href="https://shortdevelopment.github.io/Utilities/" target="_blank" class="project">
                     <h1>
-                        Legacy-Edge-Launcher
+                        Utilities
                     </h1>
-                    <p>Get back to Microsoft Edge Legacy as simple as possible!</p>
+                    <p>A usefull collection of tricks, hacks and utilities</p>
+                </a>
+                <a href="https://github.com/ShortDevelopment/Android-ToolBox" target="_blank" class="project">
+                    <h1>
+                        Android-ToolBox
+                    </h1>
+                    <p>Usefull android applications without ads or in app purchases </p>
                 </a>
                 <a href="https://github.com/ShortDevelopment/Minecraft-Bedrock" target="_blank" class="project">
                     <h1>
@@ -299,17 +314,12 @@
                     </h1>
                     <p>Learning about addons, scripts and servers (bedrock / pe edition)</p>
                 </a>
-                <a href="https://github.com/ShortDevelopment/WhatsApp-Math-Function-Renderer" target="_blank" class="project">
+                <a href="https://github.com/ShortDevelopment/WhatsApp-Math-Function-Renderer" target="_blank"
+                    class="project">
                     <h1>
                         WhatsApp-Math-Function-Renderer
                     </h1>
                     <p>Send math-functions via social media!</p>
-                </a>
-                <a href="https://github.com/ShortDevelopment/BigBlueButton-Smiliey" target="_blank" class="project">
-                    <h1>
-                        BigBlueButton-Smiliey
-                    </h1>
-                    <p>Use smilies in a BigBlueButton and Moodle chat</p>
                 </a>
                 <a href="https://github.com/ShortDevelopment/Creo-open-DRW" target="_blank" class="project">
                     <h1>
@@ -329,6 +339,12 @@
                     </h1>
                     <p>Unser Beitrag zum BundesUmweltWettbewerb 2019. Mit @jonjon0815.</p>
                 </a>
+                <a href="https://github.com/Legacy-Edge/Legacy-Edge-Launcher" target="_blank" class="project">
+                    <h1>
+                        Legacy-Edge-Launcher
+                    </h1>
+                    <p>Get back to Microsoft Edge Legacy as simple as possible!</p>
+                </a>
             </div>
         </div>
     </div>
@@ -337,10 +353,15 @@
             <a name="feed" class="anchor"></a>
             <div class="container center" style="max-width:1400px;">
                 <h2>Feed</h2>
+                <!-- Get WinRT Interface ID from .NET -->
+                <script src="https://gist.github.com/ShortDevelopment/ddfd4e37f3495ea44702086e0082ac85.js"></script>
+                <!-- Big Blue Button Chat Notifications -->
                 <script src="https://gist.github.com/ShortDevelopment/d16086f9b203dbbb8b257c8fed1c346c.js"></script>
+                <!-- Legacy Edge Launcher -->
                 <script src="https://gist.github.com/ShortDevelopment/0b43fa199ac59ddcf0af5de416698315.js"></script>
             </div>
         </div>
     </div>
 </body>
+
 </html>
